@@ -96,9 +96,11 @@ data_new=data[col]
 sn.pairplot(data_new)
 
 #density is linearly correlated to alcohol and residual sugar --> we can avoid considering it.
-col=data.columns.tolist()
+col = data.columns.tolist()
 col.remove('density')
-data=data[col]
+data = data[col]
 
+data['merged']=np.select([data['quality']<6,data['quality']==6, data['quality']>6],[0,1,2])
+col.remove('quality')
 data.to_csv(r'C:\Users\annap\Desktop\EPFL\SML\SML_project\whitewines_cleaned.csv')
 
