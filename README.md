@@ -1,22 +1,29 @@
-# SML_project
+# A study of the main techniques used to perform ordinal regression
 
-Issues 
+In this project we performed some techniques to perform a ordinal regression. This means that the labels that we have to predict are ordered. 
+We explored the following three ordinal regression techniques:
+* multinomial regression
+* parallel ordinal regression
+* non parallel ordinal regression
 
-Should we explore one single methods or many methods? 
-Which approach should we follow? Emphasis on dataset? Theory? 
-How should we measure the accuracy? 
-Shoud we preprocess the data? 
+We perform cross validation to test the performances of those models on our dataset.
+To evaluate the performances we used:
+* Accuracy
+* Confusion Matrix
+* Mean absolute error (MAE)
+* Mean zero error (MZE)
 
-answers
-stick to logistic regression
-it's only working on some conditions: assumptions are even stronger
-w is common to all odds ratio
-we would like the directions to be slightly different 
+## General information
 
-isotonic regression (monotonic regression)
-wine dataset : class are imbalanced. Re-weighting of the data.
+## Team
+The team is composed by the following members:
+* Sandro Barissi: @sandrobarissi
+* Anna Peruso: @annaperu
+* Francesco Bollero: @frabolle
 
-Evaluation of performance
-Confusion matrix
-not unique method
-count the number of mistakes
+## Environment
+The project has been developed with `python 3.8`.
+
+The required library are `numpy, scipy, sklearn, statsmodels and pandas`.
+
+The library for vizualisation are `matplotlib and seaborn`.
